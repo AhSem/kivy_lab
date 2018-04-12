@@ -1,0 +1,171 @@
+<SidePanel>:
+    orientation: 'vertical'
+    spacing: 1
+    Label:
+        text: 'Menu'
+
+    MenuItem:
+        text: 'Label'
+
+    MenuItem:
+        text: 'Button'
+
+    MenuItem:
+        text: 'CheckBox'
+
+    MenuItem:
+        text: 'Image'
+
+    MenuItem:
+        text: 'Slider'
+
+    MenuItem:
+        text: 'Progress Bar'
+
+    MenuItem:
+        text: 'Text Input'
+
+    MenuItem:
+        text: 'Toggle Button'
+
+    MenuItem:
+        text: 'Switch'
+
+    MenuItem:
+        text: 'Video'
+
+
+<MainPanel>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+
+    BoxLayout:
+    	Label:
+    		text: 'Welcome to Kivy Lab'
+
+
+<AppActionBar>:
+    pos_hint: {'top':1}
+    ActionView:
+        use_separator: True
+        ActionMenu:
+            title: 'Kivy Lab'
+            with_previous: False
+            app_icon: './assets/icons/menu.png'
+            app_icon_height: 32
+            app_icon_width: 32
+            on_press: self.menu()
+        
+
+<LabelPage>:
+    label: label
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        id: label
+        text: 'This is Label Page'
+
+    GridLayout:
+        cols:2
+
+        Label:
+            text: 'text'
+        TextInput:
+            text: 'This is Label Page'
+            on_text: root.update_text(self) 
+
+        Label:
+            text: 'font_size'
+        TextInput:
+            text: '16'
+            input_type: 'number'
+            input_filter: 'int'
+            on_text: root.update_font_size(self)
+
+
+<ButtonPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Button Page'
+
+<CheckBoxPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is CheckBox Page'
+
+<ImagePage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Image Page'
+
+<SliderPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Slider Page'
+
+<ProgressBarPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Progress Bar Page'
+
+<TextInputPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Text Input Page'
+
+<ToggleButtonPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Toggle Button Page'
+
+<SwitchPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Switch Page'
+
+<VideoPage>:
+    orientation: 'vertical'
+    spacing: 1
+
+    AppActionBar:
+        size_hint: (1., 0.1)
+    Label:
+        text: 'This is Video Page'
